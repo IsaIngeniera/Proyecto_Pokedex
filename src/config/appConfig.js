@@ -7,7 +7,7 @@ function createAppConfig(environment) {
 
   return Object.freeze({
     port,
-    bucketName: environment.GCP_BUCKET || 'TU_BUCKET',
+    bucketName: environment.GCP_BUCKET || 'pokeneas-isabella-imagenes-2026',
   });
 }
 
