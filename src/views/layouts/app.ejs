@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eee9ff">
+    <meta name="description" content="Descubre los Pokeneas de Antioquia y sus frases filosóficas.">
+    <title><%= viewData.pageTitle %></title>
+    <link rel="stylesheet" href="/assets/css/pokeneas.css">
+  </head>
+  <body>
+    <div class="background-orb orb-blue" aria-hidden="true"></div>
+    <div class="background-orb orb-purple" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/pokeneas" aria-label="Inicio de Pokeneas">
+          <span class="brand-symbol" aria-hidden="true"><span></span></span>
+          <span>pokeneas<span class="brand-dot">.</span></span>
+        </a>
+        <span class="header-badge">Hechos de magia paisa</span>
+      </header>
+      <main><%- body %></main>
+      <footer class="site-footer">
+        <span>Un pequeño universo entre montañas.</span>
+        <span>Antioquia, Colombia</span>
+      </footer>
+    </div>
+  </body>
+</html>

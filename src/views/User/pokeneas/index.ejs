@@ -1,0 +1,55 @@
+<section class="hero" aria-labelledby="page-title">
+  <span class="eyebrow">✦ UNA COLECCIÓN CON ACENTO PAISA</span>
+  <h1 id="page-title">Un encuentro con<span>algo extraordinario.</span></h1>
+  <p>Entre flores, montañas y un poquito de café,<br>hay un Pokenea esperando alegrarte el día.</p>
+</section>
+<section class="encounter" aria-labelledby="pokenea-name">
+  <div class="art-panel">
+    <div class="art-topline">
+      <span class="discovery-badge">Tu descubrimiento de hoy</span>
+      <span class="collection-number">N.º <%= String(viewData.pokenea.id).padStart(3, '0') %></span>
+    </div>
+    <div class="portrait-stage">
+      <div class="portrait-halo" aria-hidden="true"></div>
+      <span class="floating-star star-one" aria-hidden="true">✦</span>
+      <span class="floating-star star-two" aria-hidden="true">✧</span>
+      <img class="pokenea-image" width="420" height="420"
+        src="https://storage.googleapis.com/<%= viewData.bucketName %>/<%= viewData.pokenea.imageFile %>"
+        alt="Ilustración del Pokenea <%= viewData.pokenea.name %>">
+    </div>
+    <div class="art-bottomline">
+      <span class="origin-pill">✿ Nacido en Antioquia</span>
+      <span class="art-caption">Un personaje, muchas historias.</span>
+    </div>
+  </div>
+  <div class="details-panel">
+    <span class="section-label">CONOCE A TU POKENEA</span>
+    <h2 id="pokenea-name"><%= viewData.pokenea.name %></h2>
+    <p class="character-description">Una nueva amistad de nuestro rincón favorito del mundo.</p>
+    <div class="character-facts">
+      <div class="fact"><span class="fact-label">ALTURA</span><strong><%= viewData.pokenea.height %> <small>m</small></strong></div>
+      <div class="fact"><span class="fact-label">ORIGEN</span><strong>Antioquia</strong></div>
+    </div>
+    <div class="ability-card">
+      <span class="ability-icon" aria-hidden="true">✧</span>
+      <div><h3>Su pequeño superpoder</h3><p><%= viewData.pokenea.ability %></p></div>
+    </div>
+    <figure class="quote-card">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <blockquote><%= viewData.pokenea.philosophicalPhrase %></blockquote>
+      <figcaption>Una pausa para pensar bonito.</figcaption>
+    </figure>
+    <div class="page-actions">
+      <a class="button button-primary" href="/pokeneas">Descubrir otro Pokenea <span aria-hidden="true">↗</span></a>
+      <a class="button button-secondary" href="/api/pokeneas">Ver datos JSON <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="random-note">Cada encuentro es aleatorio. A veces, la magia se repite.</p>
+  </div>
+</section>
+<section class="technical-strip" aria-label="Información de ejecución">
+  <div class="runtime-information">
+    <span class="runtime-dot" aria-hidden="true"></span>
+    <div><span class="technical-label">CONTENEDOR QUE ATENDIÓ ESTA PETICIÓN</span><code><%= viewData.containerId %></code></div>
+  </div>
+  <div class="collection-information"><strong><%= viewData.pokeneaCount %></strong><span>Pokeneas por descubrir</span></div>
+</section>
